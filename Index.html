@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ngatia | ICT & Professional Portfolio</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #eef2f5; color: #333; }
+    nav { background: #1a76d2; }
+    nav a { color: #fff; margin: 0 .75rem; font-weight: 500; cursor: pointer; }
+    nav a:hover { color: #ffd54f; }
+    section { display: none; padding: 2rem 0; }
+    section.active { display: block; animation: fadeIn 0.6s ease-in; }
+    @keyframes fadeIn { from {opacity:0} to {opacity:1} }
+    #hero { background: white; padding: 3rem; border-radius: .875rem;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.08); text-align: center;}
+    h1 { font-weight: 700; color: #1a76d2; }
+    .duration { color: #777; font-size: .9rem; }
+    article ul { margin-left: 1.2rem; }
+    footer { margin-top: 2rem; text-align: center; color: #555; }
+    footer a { color: #1a76d2; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand">
+  <div class="container">
+    <a data-sec="hero">Home</a>
+    <a data-sec="experience">Experience</a>
+    <a data-sec="education">Education</a>
+    <a data-sec="contacts">Contacts</a>
+  </div>
+</nav>
+
+<main class="container mt-5">
+  <section id="hero" class="active">
+    <h1>Ngatia</h1>
+    <p><strong>Diploma in ICT, Daystar University (Jan 2025 – Present)</strong></p>
+    <p>📞 <a href="tel:+254743349955">+254 743 349 955</a> | ✉️ <a href="mailto:ngatia3223@gmail.com">ngatia3223@gmail.com</a></p>
+  </section>
+
+  <section id="experience">
+    <h2>💼 Work Experience</h2>
+    <article class="mt-4">
+      <h3>ElKay Limited, Nairobi <span class="duration">(May 2024 – Present)</span></h3>
+      <ul>
+        <li>Support production of bakery ingredients—pan grease, dough improver, cake gel, bakers’ fat & flavours</li>
+        <li>Ensure KEBS & HALAL compliance for ingredient batches</li>
+        <li>Coordinate QA processes and deliveries with clients & suppliers</li>
+        <li>Drive continuous improvement initiatives in manufacturing workflows</li>
+      </ul>
+    </article>
+  </section>
+
+  <section id="education">
+    <h2>🎓 Education</h2>
+    <p><strong>Daystar University</strong> – Diploma in ICT (Jan 2025 – Present)</p>
+    <p><strong>Premier Academy, Nairobi</strong> – O‑Level</p>
+  </section>
+
+  <section id="contacts">
+    <h2>📇 Professional Contacts</h2>
+    <ul>
+      <li><strong>Ngatia Group Executive Cars & Limousines</strong><br>
+          📞 +254 727 405 495 📞 +254 718 343 743<br>
+          ✉️ info@executivecarhirekenya.com / ngatiagroup@gmail.com5
+      </li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <p>Stay connected: <a href="tel:+254743349955">+254 743 349 955</a> | <a href="mailto:ngatia3223@gmail.com">ngatia3223@gmail.com</a></p>
+</footer>
+
+<script>
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      const sec = link.getAttribute('data-sec');
+      document.querySelectorAll('main section').forEach(s => s.classList.remove('active'));
+      document.getElementById(sec).classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
